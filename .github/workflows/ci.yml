@@ -21,7 +21,7 @@ jobs:
       with:
         repository: Lowkh/hiddenRepo
         path: file
-        token ${{secrets.TEST_TOKEN}}
+        token: ${{secrets.TEST_TOKEN}}
     - name: SHow hidden files
       run: |
         cd file
