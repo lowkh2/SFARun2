@@ -1,3 +1,4 @@
+### Activity 1
 name: Simple Start Up
 on:
   push:
@@ -13,3 +14,16 @@ jobs:
       run: |
         ls
         echo Hello There!
+
+### Activity 2
+    - name: Checkout Private Repo Remotely
+      uses: actions/checkout@v2
+      with:
+        repository: Lowkh/hiddenRepo
+        path: file
+        token ${{secrets.TEST_TOKEN}}
+    - name: SHow hidden files
+      run: |
+        cd file
+        ls
+        cat *.txt
